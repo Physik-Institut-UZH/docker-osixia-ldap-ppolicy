@@ -1,0 +1,4 @@
+FROM osixia/openldap:1.4.0
+
+COPY 07-ppolicy_module_load.ldif  08-ppolicy.ldif   /container/service/slapd/assets/config/bootstrap/ldif/
+COPY db_init.ldif  /container/service/slapd/assets/config/bootstrap/ldif/custom/. 

@@ -1,0 +1,44 @@
+# users, xenoscope.org
+dn: ou=users,dc=xenoscope,dc=org
+changetype: add
+objectClass: organizationalUnit
+ou: users
+
+# groups, xenoscope.org
+dn: ou=groups,dc=xenoscope,dc=org
+changetype: add
+objectClass: organizationalUnit
+ou: groups
+
+# scadmin, users, xenoscope.org
+dn: uid=scadmin,ou=users,dc=xenoscope,dc=org
+changetype: add
+objectClass: inetOrgPerson
+uid: scadmin
+sn: admin
+cn: xenoscope
+displayname: Xeno
+userPassword: Yml0bmFtaTI=
+mail: a.manfredini.work@gmail.com
+mobile: 02192654623
+
+# admins, groups, xenoscope.org
+dn: cn=admins,ou=groups,dc=xenoscope,dc=org
+changetype: add
+cn: admins
+objectClass: groupOfNames
+member: uid=scadmin,ou=users,dc=xenoscope,dc=org
+
+# readers, groups, xenoscope.org
+dn: cn=readers,ou=groups,dc=xenoscope,dc=org
+changetype: add
+cn: readers
+objectClass: groupOfNames
+member:
+
+# writers, groups, xenoscope.org
+dn: cn=writers,ou=groups,dc=xenoscope,dc=org
+changetype: add
+cn: writers
+objectClass: groupOfNames
+member:
